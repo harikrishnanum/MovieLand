@@ -3,9 +3,7 @@ import './App.css'
 import MovieCard from './MovieCard';
 import SearchIcon from './search.svg'
 
-
-// const OMDB_API = `http://www.omdbapi.com/?apikey=${process.env.OMDB_API_KEY}` // getting ReferenceError: process is not defined
-const OMDB_API = `http://www.omdbapi.com/?apikey=4a3b711b`
+const OMDB_API = `http://www.omdbapi.com/?apikey=${import.meta.env.VITE_OMDB_API_KEY}`
 
 const App = () => {
   const [movies, setMovies] = useState([])

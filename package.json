@@ -1,5 +1,5 @@
 {
-  "name": "crash_course",
+  "name": "movieland",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,11 +9,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@chakra-ui/react": "^2.5.1",
-    "@emotion/react": "^11.10.6",
-    "@emotion/styled": "^11.10.6",
-    "env-cmd": "^10.1.0",
-    "framer-motion": "^10.2.4",
     "preact": "^10.11.3"
   },
   "devDependencies": {
