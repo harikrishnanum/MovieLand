@@ -9,6 +9,7 @@ const App = () => {
   const [movies, setMovies] = useState([])
   const [searchTerm, setSearchTerm] = useState('')
   const [loading, setLoading] = useState(false)
+  const [showEmpty, setShowEmpty] = useState(false)
 
   const searchMovies = async (title) => {
     setLoading(true)
@@ -16,6 +17,9 @@ const App = () => {
     const data = await res.json();
     setMovies(data.Search);
     setLoading(false)
+    if (!data.Search || data.Search.length === 0) {
+      setShowEmpty(true)
+    }
   }
   return (
     <>
@@ -44,11 +48,11 @@ const App = () => {
             movies?.length > 0 ?
               <div className='container'>
                 {movies.map(movie => <MovieCard movie={movie} />)}
-              </div> : (
+              </div> : showEmpty ? (
                 <div className='empty'>
                   <h2>No movies found</h2>
                 </div>
-              )
+              ) : null
         }
       </div>
     </>
