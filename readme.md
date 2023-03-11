@@ -15,12 +15,16 @@ MovieLand is a simple web application that allows users to search for movie deta
     cd MovieLand
     npm install
      ```
-3. Start the development server:
+3. create a .env file
+   ```sh
+   VITE_OMDB_API_KEY=
+   ```
+4. Start the development server:
 
     ```sh
     npm run dev
     ```
-4. Open http://localhost:5173 in your browser to view the app.
+5. Open http://localhost:5173 in your browser to view the app.
    
 ## Usage
 - Enter the name of the movie you want to search in the search bar and click the "Search" button or press Enter.
